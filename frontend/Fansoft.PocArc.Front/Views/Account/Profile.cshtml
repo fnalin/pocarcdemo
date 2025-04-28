@@ -1,0 +1,8 @@
+@{
+    ViewData["Title"] = "Meu Perfil";
+}
+
+<h1>Meu Perfil</h1>
+
+<p><strong>Usuário:</strong> @User.Identity?.Name</p>
+<p><strong>Autenticado:</strong> @User.Identity?.IsAuthenticated</p>
