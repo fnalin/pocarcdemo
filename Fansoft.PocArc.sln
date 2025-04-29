@@ -23,6 +23,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "keycloak", "keycloak", "{38
 		infra\keycloak\realm-export.json = infra\keycloak\realm-export.json
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vm", "vm", "{47DCFD99-AF5A-4C2C-B906-8A1E09FEB1D2}"
+	ProjectSection(SolutionItems) = preProject
+		infra\vm\azure.txt = infra\vm\azure.txt
+		infra\vm\demopoc123admin.pem = infra\vm\demopoc123admin.pem
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +39,7 @@ Global
 		{E832828B-A5E7-41AB-8CA7-14DD1B440D12} = {7AEA5950-9718-4ED6-A3BC-0BE9206C3D90}
 		{E954B0EA-109C-4797-A376-7DF49CA8BEC4} = {42578981-AD2B-44F5-BA86-FC8D6E302FE0}
 		{38BFA6AB-B725-44B2-903C-EAB22CD4114A} = {7AEA5950-9718-4ED6-A3BC-0BE9206C3D90}
+		{47DCFD99-AF5A-4C2C-B906-8A1E09FEB1D2} = {7AEA5950-9718-4ED6-A3BC-0BE9206C3D90}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{779D10E3-5349-4868-A286-6E9521974504}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
