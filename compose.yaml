@@ -27,12 +27,9 @@ services:
     depends_on:
       - sqlserver-check
     entrypoint: /bin/bash -c "
-      echo '⏳ Waiting for SQL Server to stabilize...' &&
-      sleep 10 &&
-      for i in {1..10}; do
-      /opt/mssql-tools/bin/sqlcmd -S sqlserverdb -U sa -P Your_strong_password123 -Q 'SELECT 1' && break || echo '⏳ Waiting for SQL Server...' && sleep 5;
-      done &&
-      /opt/mssql-tools/bin/sqlcmd -S sqlserverdb -U sa -P Your_strong_password123 -i /init.sql &&
+      echo '⏳ Waiting a few seconds for SQL Server to fully stabilize...' &&
+      sleep 15 &&
+      /opt/mssql-tools/bin/sqlcmd -S sqlserverdb -U sa -P ${SA_PASSWORD} -i /init.sql &&
       echo '✅ init.sql executed successfully.'"
     volumes:
       - ./infra/database/init.sql:/init.sql
